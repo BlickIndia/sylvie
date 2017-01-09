@@ -22,4 +22,11 @@ gulp.task('watch', function () {
   gulp.watch(config.paths.src.img, ['copy:images']);
 });
 
+var ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 gulp.task('default', ['build', 'webserver:run', 'webserver:reload', 'watch']);
