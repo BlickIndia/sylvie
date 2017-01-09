@@ -1,0 +1,143 @@
+.contacto {
+	color $grey
+	font-size 18px
+    .form-control {
+	  border-radius 0px
+	  box-shadow none
+	  height 56px
+	  margin-bottom 20px
+	  max-width: 100%;
+      width: 356px;
+	  simple-border(all, 1px, $grey, solid)
+	}
+	textarea.form-control {
+	  height 135px
+	}
+
+	label[id*="-error"] {
+		color #ff3636
+		display block
+		margin-top -10px !important
+	}
+
+	.form-message {
+		&.error,
+		&.success {
+			margin 30px 0
+		}
+
+		&.error {
+			color #ff3636
+		}
+
+		&.success {
+			color #5cab5c
+		}
+
+		.fa {
+			color inherit
+			display inline-block
+			margin-top 0
+			float none
+			clear none
+			vertical-align middle
+		}
+
+		span {
+			float none
+			clear none
+			display inline-block
+			vertical-align middle
+		}
+	}
+
+	.sylvie-loader {
+		display none
+		margin 30px 0 20px 0
+		text-align center
+		width 110px
+
+		.ball-pulse-sync {
+			display inline-block
+
+			div {
+				background $color2
+			}
+		}
+	}
+
+	i.fa {
+	  color $colorB
+	  clear left
+	  display block
+	  float left
+	  margin-right 20px
+	  margin-top 4px
+	  width 20px
+	}
+	span {
+	  clear right
+	  display block
+	  float left
+	  line-height normal
+	  font-weight $light
+	  font-style normal !important
+	}
+	 h4 {
+       margin-left 40px
+       margin-top 100px
+}
+	label {
+		font-weight $normal
+	}
+	textarea {
+   resize none
+}
+}
+
+.btn-contacto {
+	border 3px solid $color2
+	height 54px
+	width 123px
+	background $white
+	border-radius 0px
+	font-size 18px
+
+	&[disabled] {
+		display none
+	}
+
+	&[disabled] + .sylvie-loader {
+		display block
+	}
+}
+.btn-contacto:hover {
+border none
+color $white
+background $color2
+}
+
+#map {
+  width 100%
+  height 420px
+  margin-top 30px
+}
+
+@media screen and (max-width: 767px) {
+.contacto form,
+.contacto .contact-text {
+  margin 0 auto
+  width 300px
+  max-width 100%
+}
+.contacto span, .btn-contacto, .contacto {
+  font-size 16px
+}
+.contacto .sylvie-loader {
+	margin 30px auto 20px auto
+}
+.contacto .form-message,
+.contacto label[id*="-error"] {
+	text-align center
+}
+}

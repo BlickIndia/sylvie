@@ -1,0 +1,117 @@
+{% extends "partials/base.njk" %}
+
+
+{% block meta %}
+{% endblock %}
+{% block styles %}
+<link href='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.css' rel='stylesheet' />
+{% endblock %}
+{% block title %}
+Contacto
+{% endblock %}
+{% block content %}
+<section class="mt100 title">
+<div class="container">
+	<h2 class="text-center heavy">Contacto</h2>
+</div>
+</section>
+<section class="main-bg contacto lato">
+	<div class="container">
+		<div class="whitebg heavy padding100 padding-b-0 position">
+			<div class="col-sm-6">
+				<form id="contact-form">
+				  <div class="form-group">
+				    <label class="lato" for="nombre">Nombre</label>
+				    <input type="text" name="name" class="form-control" id="name">
+				  </div>
+				  <div class="form-group">
+				    <label class="lato" for="correo">Correo electrónico</label>
+				    <input type="email" name="email" class="form-control" id="email">
+				  </div>
+				  <div class="form-group">
+				    <label class="lato" for="mensaje">Mensaje</label>
+				    <textarea class="form-control" name="message" id="message"></textarea>
+				  </div>
+					<div class="form-message">
+					</div>
+					<button type="submit" class="btn btn-contacto roman ">Enviar</button>
+					<div class="loader sylvie-loader">
+						<div class="ball-pulse-sync">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<div class="contact-text">
+					<h4 class="lato">Datos de la escuela:</h4>
+					<ul class="list-unstyled lato">
+						<li>
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+							<span>ebsr96@gmail.com</span>
+						</li>
+						<li>
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<span>Av. Noche de Paz 14, Locales 30 al 33.<br />
+								  Col. Vista Hermosa C.P. 05210.<br />
+								  Cuajimalpa, Ciudad de México.</span>
+						</li>
+						<li><i style="margin-top: 0.5em" class="fa fa-mobile-phone" aria-hidden="true"></i><span style="margin-top: 0.5em">(55) 5813 2686</span></li>
+						<li><i class="fa fa-phone" aria-hidden="true"></i><span>(55) 5813 7401</span></li>
+						<li><i class="fa fa-facebook-square" aria-hidden="true"></i><span>/BalletSylvieReynaud</span></li>
+						<li><i class="fa fa-instagram" aria-hidden="true"></i><span>ballet_sr</span></li>
+						<li class="clearfix"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="col-sm-12">
+				<div id="map"></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</section>
+
+
+
+{% endblock %}
+{% block scripts %}
+<script src='https://api.mapbox.com/mapbox.js/v3.0.1/mapbox.js'></script>
+	<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiYmFsaml0IiwiYSI6ImNpdzdlYXd5MDAwZmgydHF1ajFoMjV2dm4ifQ.AOMhooI3INHBxEXf3zapmg';
+var map = L.mapbox.map('map', 'mapbox.streets');
+map.setView([19.3724787,-99.2805605], 17);
+
+// Build a marker from a simple GeoJSON object:
+var marker = L.mapbox.featureLayer({
+    type: 'Feature',
+    geometry: {
+        type: 'Point',
+        coordinates: [-99.2805605,19.3724787]
+    },
+    properties: {
+
+
+        title:'Av Noche de Paz 14',
+         description:'Huizachito, 05249 Ciudad de México, CDMX, Mexico',
+
+          'marker-color': '#194F73',
+          'marker-symbol': 'marker',
+          'marker-size': 'large',
+    }
+}).addTo(map);
+
+// Iterate over the featureLayer we've called "marker"
+// and open its popup instead of clicking to trigger it.
+marker.eachLayer(function(m) {
+  m.openPopup();
+});
+
+$('.leaflet-control-attribution ').css('display','none');
+
+</script>
+{% endblock %}
+

@@ -1,0 +1,60 @@
+{
+  "name": "sylvie",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Alan Sanchez"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "jquery-validation": "jquery-validate#^1.15.1",
+    "bootstrap": "^3.3.7",
+    "nib": "^1.1.2",
+    "parallax.js": "^1.4.2",
+    "mapbox.js": "^2.4.0",
+    "font-awesome": "fontawesome#^4.7.0",
+    "simpleParallax": "simple-parallax#*",
+    "loaders.css": "^0.1.2"
+  },
+  "group": {
+    "css": [
+      "bootstrap",
+      "font-awesome",
+      "loaders.css"
+    ],
+    "js": [
+      "jquery",
+      "jquery-validation",
+      "bootstrap",
+      "simpleParallax"
+    ],
+    "fonts": [
+      "font-awesome"
+    ]
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "./css/font-awesome.min.css",
+        "./fonts/*"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "./dist/css/bootstrap.min.css",
+        "./dist/js/bootstrap.min.js"
+      ]
+    }
+  }
+}

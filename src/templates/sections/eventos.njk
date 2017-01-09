@@ -1,0 +1,85 @@
+{% extends "partials/base.njk" %}
+
+{% block meta %}
+{% endblock %}
+
+{% block title %}
+Eventos
+{% endblock %}
+{% block content %}
+<section class="title mt100">
+<div class="container">
+	<h2 class="text-center heavy">Eventos</h2>
+</div>
+
+</section>
+<div id="img3" class="top-image parallax cover"></div>
+<section class="main-bg eventos padding-t-0 text-center">
+
+	<div class="container">
+
+		<div class="whitebg heavy padding100 position">
+
+			<div class="first-row tab mrg">
+
+				<div class="img1 col-md-5 col-lg-4 pull-left">
+				<h2 class="futura">NOVIEMBRE</h2>
+				<img class="img-responsive"src="img/eventos/group-3.jpg">
+				</div>
+				<div class="img1-content col-md-7 col-lg-8 pull-right">
+				<p>Exámenes de Majors:<br>
+					de Intermediate Foundation hasta Advanced 2.</p>
+				</div>
+			</div>
+
+		  <div class="clearfix"></div>
+			<div class="second-row tab mrg">
+
+			<div class="img2 col-md-5 col-lg-4 pull-right">
+				<h2 class="futura">DICIEMBRE</h2>
+				<img class="img-responsive" src="img/eventos/group.png">
+				</div>
+				<div class="img2-content col-md-7 col-lg-8 pull-left">
+				<p class="text-right pull-right">Clases públicas.<br>
+					 Para que los papás puedan apreciar lo que las niñas han ido aprendiendo y cómo están preparadas para el examen de febrero.</p>
+				</div>
+
+
+		    </div>
+			<div class="clearfix"></div>
+			<div class="third-row tab mrg">
+
+				<div class="img3 col-md-5 col-lg-4 pull-left">
+				<h2 class="futura">FEBRERO</h2>
+				<img class="img-responsive" src="img/eventos/group.png">
+				</div>
+				<div class="img3-content col-md-7 col-lg-8 pull-right">
+				<p>Festival de fin de cursos y entrega de diplomas y concurso de coreografías. </p>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<div class="fourth-row tab mrg">
+
+				<div class="img4 col-md-5 col-lg-4 pull-right">
+				<h2 class="medium">JUNIO</h2>
+				<img class="img-responsive" src="img/eventos/group.png">
+				</div>
+				<div class="img4-content col-md-7 col-lg-8 pull-left">
+				<p class="pull-right text-right">Todos los exámenes:  de Pre Primary hasta octavo. </p>
+				</div>
+				<div class="clearfix"></div>
+		    </div>
+		<div class="blank"></div>
+		</div>
+
+	</div>
+
+	</section>
+{% endblock %}
+{% block scripts %}
+<script>
+$(function(){
+			$('.parallax').simpleParallax();
+		});
+</script>
+{% endblock %}

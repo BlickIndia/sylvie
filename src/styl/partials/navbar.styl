@@ -1,0 +1,177 @@
+header
+  position fixed
+  top 0
+  z-index 10
+  width 100%
+
+  &.fixed
+    nav
+      padding-bottom 15px
+      li
+        border none !important
+      &.white
+        background #81536d
+
+        li.active, li:hover, li:active, li:focus
+          a
+            color #222 !important
+
+      &:not(.white)
+        background white
+
+      img
+        width 110px !important
+
+nav
+  transition all 0.3s
+
+  img
+    transition all 0.3s
+
+#navbar-primary .navbar-nav {
+  width 100%
+  center-text()
+  li {
+    display inline-block;
+    float none
+    margin-right -4px
+    simple-border(bottom, 1px, $darkgrey, solid)
+    }
+   li.logo {
+   	simple-border(bottom, 0, transparent, solid)
+   }
+}
+
+#navbar-primary {
+.navbar-toggle {
+
+.icon-bar {
+	background $darkgrey
+}
+}
+a {
+	color $darkgrey
+}
+li {
+	simple-border(bottom, 1px, $darkgrey, solid)
+}
+}
+
+.white#navbar-primary {
+.navbar-toggle {
+
+.icon-bar {
+	background $white
+}
+}
+a {
+	color $white
+}
+li {
+	simple-border(bottom, 1px, $white, solid)
+}
+}
+
+img#logo-navbar-middle
+  width 150px
+
+#navbar-primary .logo a
+	padding 20px 30px 0px
+	&:hover, &:active, &:focus
+    background transparent !important
+
+#navbar-primary a
+  color $darkgrey
+  font-size 18px
+  letter-spacing 0.9px
+  padding 30px
+  &:hover, &:active, &:focus
+  	  background transparent
+  	  color $navcol
+
+#navbar-primary li.active a
+  background transparent
+  color $navcol
+
+@media screen and (max-width: 1199px) {
+#navbar-primary a {
+  padding 20px 15px 20px
+}
+}
+
+@media screen and (max-width: 991px) {
+img#logo-navbar-middle {
+  width 100px
+}
+
+#navbar-primary a {
+  padding 10px 10px 20px
+  font-size 14px
+}
+}
+
+@media screen and (min-width: 768px) {
+	.mobile-logo {
+	display none
+	}
+}
+
+@media screen and (max-width: 767px) {
+  #navbar-primary-collapse {
+  	margin-top 15px
+  }
+
+  #navbar-primary-collapse li {
+    border-bottom none !important
+  }
+
+  .nav.navbar-nav > li:last-child, .nav.navbar-nav > li:nth-last-child(2){
+    border: none !important;
+  }
+  ul.navbar-nav {
+  	margin 0px !important
+  }
+  .section2 .col-md-3.col-sm-6 {
+    float left
+    width 50%
+  }
+  .logo {
+    display none !important
+  }
+  .mobile-logo {
+    left 10px
+    position fixed
+    top 10px
+
+    img {
+      transition all 0.3s
+    }
+
+    &.small img {
+      width 80px !important
+    }
+  }
+  #navbar-primary .navbar-nav li {
+    width 50%
+  }
+  #navbar-primary-collapse {
+    box-shadow:  none
+  }
+  nav.white #navbar-primary-collapse {
+    background #81536d
+  }
+
+  nav:not(.white) #navbar-primary-collapse {
+    background white
+  }
+  #navbar-primary-collapse {
+    position relative
+    z-index 999
+  }
+}
+
+@media screen and (max-width: 480px) {
+.section2 figure img.img-responsive {
+  height 150px !important
+}
+}
