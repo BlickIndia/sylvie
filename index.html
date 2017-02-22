@@ -10,8 +10,11 @@
     <link rel="stylesheet" href="css/main.css">
     
 <style type="text/css">
-	    .parallax {  background-repeat:no-repeat; }
-		#img1 { background-image: url("img/cover/top-banner.jpg");background-size:cover;height:600px;  }
+    .parallax {  background-repeat:no-repeat; }
+		#homepage-carousel {  height:600px;  }
+		#homepage-carousel .carousel-inner,
+		#homepage-carousel .item {  height:100%;  }
+		#homepage-carousel .item-layer {  height:100%; background: rgba(0,0,0,0.2);  }
 		#img2 { background-image: url("img/cover/foto-baile-rosa.png");background-size:cover; height:581px;background-attachment:fixed;}
 		#img3 { background-image: url("img/eventos/footer-img.png");height:536px;background-size:cover;background-attachment:fixed;}
 </style>
@@ -59,7 +62,16 @@
       <main>
         
 
-<div id="img1"  class="parallax img-responsive"></div>
+<div id="homepage-carousel" class="carousel slide" data-ride="carousel" data-interval="3500">
+  <div class="carousel-inner" role="listbox">
+    <div class="item active simple-parallax cover" style="background-image: url(img/homepage/carrusel01.jpg)">
+			<div class="item-layer"></div>
+    </div>
+    <div class="item cover simple-parallax" style="background-image: url(img/homepage/carrusel02.jpg)">
+			<div class="item-layer"></div>
+    </div>
+  </div>
+</div>
 <div class="absolute topcontent mt100 ">
 <div class="container">
 	<div class="row">
