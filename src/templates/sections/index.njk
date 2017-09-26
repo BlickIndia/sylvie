@@ -9,15 +9,23 @@ Sylvie Reynaud
 
 {% block content %}
 
-<div id="homepage-carousel" class="carousel slide" data-ride="carousel" data-interval="3500">
+<!--<div id="homepage-carousel" class="carousel slide" data-ride="carousel" data-interval="3500">
   <div class="carousel-inner" role="listbox">
-    <div class="item active cover photocover-1">
+    <div class="item active simple-parallax cover photocover-1">
 			<div class="item-layer"></div>
     </div>
-    <div class="item cover photocover-2">
+    <div class="item cover simple-parallax photocover-2">
 			<div class="item-layer"></div>
     </div>
   </div>
+</div>-->
+<div class="homepage-carousel">
+	<div>
+		<div class="photocover-1"></div>
+	</div>
+	<div>
+		<div class="photocover-2"></div>
+	</div>
 </div>
 <div class="absolute topcontent mt100 ">
 <div class="container">
@@ -123,6 +131,40 @@ Sylvie Reynaud
 <script>
 $(function(){
 	$('.parallax').simpleParallax();
+});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+  $('.homepage-carousel').slick({
+  	autoplay: true,
+  	arrows: false,
+  	touchMove: false,
+  	speed: 300,
+  	fade: true,
+  	responsive: [
+  		{
+  			breakpoint: 480,
+  			settings: {
+  				arrows: false,
+  				autoplay: true,
+  				touchMove: false,
+  				speed: 300,
+  				fade: true
+  			}
+  		},
+  		{
+  			breakpoint: 780,
+  			settings: {
+  				arrows: false,
+  				autoplay: true,
+  				touchMove: false,
+  				speed: 300,
+  				fade: true
+  			}
+  		}
+  	]
+  });
 });
 </script>
 {% endblock %}
