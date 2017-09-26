@@ -2,32 +2,30 @@
 
 {% block meta %}
 {% endblock %}
-{% block styles %}
-<style type="text/css">
-    .parallax {  background-repeat:no-repeat; }
-		#homepage-carousel {  height:600px;  }
-		#homepage-carousel .carousel-inner,
-		#homepage-carousel .item {  height:100%;  }
-		#homepage-carousel .item-layer {  height:100%; background: rgba(0,0,0,0.2);  }
-		#img2 { background-image: url("img/cover/foto-baile-rosa.png");background-size:cover; height:581px;background-attachment:fixed;}
-		#img3 { background-image: url("img/eventos/footer-img.png");height:536px;background-size:cover;background-attachment:fixed;}
-</style>
-{% endblock %}
+
 {% block title %}
 Sylvie Reynaud
 {% endblock %}
 
 {% block content %}
 
-<div id="homepage-carousel" class="carousel slide" data-ride="carousel" data-interval="3500">
+<!--<div id="homepage-carousel" class="carousel slide" data-ride="carousel" data-interval="3500">
   <div class="carousel-inner" role="listbox">
-    <div class="item active simple-parallax cover" style="background-image: url(img/homepage/carrusel01.jpg)">
+    <div class="item active simple-parallax cover photocover-1">
 			<div class="item-layer"></div>
     </div>
-    <div class="item cover simple-parallax" style="background-image: url(img/homepage/carrusel02.jpg)">
+    <div class="item cover simple-parallax photocover-2">
 			<div class="item-layer"></div>
     </div>
   </div>
+</div>-->
+<div class="homepage-carousel">
+	<div>
+		<div class="photocover-1"></div>
+	</div>
+	<div>
+		<div class="photocover-2"></div>
+	</div>
 </div>
 <div class="absolute topcontent mt100 ">
 <div class="container">
@@ -133,6 +131,40 @@ Sylvie Reynaud
 <script>
 $(function(){
 	$('.parallax').simpleParallax();
+});
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+  $('.homepage-carousel').slick({
+  	autoplay: true,
+  	arrows: false,
+  	touchMove: false,
+  	speed: 300,
+  	fade: true,
+  	responsive: [
+  		{
+  			breakpoint: 480,
+  			settings: {
+  				arrows: false,
+  				autoplay: true,
+  				touchMove: false,
+  				speed: 300,
+  				fade: true
+  			}
+  		},
+  		{
+  			breakpoint: 780,
+  			settings: {
+  				arrows: false,
+  				autoplay: true,
+  				touchMove: false,
+  				speed: 300,
+  				fade: true
+  			}
+  		}
+  	]
+  });
 });
 </script>
 {% endblock %}

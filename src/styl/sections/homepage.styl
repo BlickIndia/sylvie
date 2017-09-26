@@ -235,6 +235,18 @@ img
 
 
   	}
+   
+  .homepage-carousel {
+    height: 400px !important;
+  }
+  
+  .photocover-1 {
+    height: 400px !important;
+  }
+  
+  .photocover-2 {
+    height: 400px !important;
+  }
 
 
   #dance {
@@ -300,8 +312,45 @@ img
   .section3 h2
     font-size 26px
     top 17%
+
 /* parallax css start */
 
-
-
+.parallax
+  background-repeat no-repeat
+  
 /* parallax css end */
+  
+#homepage-carousel
+  height 600px
+
+#homepage-carousel .carousel-inner,
+#homepage-carousel .item
+  height 100%
+
+#homepage-carousel .item-layer
+  height 100%
+  background  rgba(0, 0, 0, 0.2)
+
+#img2
+  background-image  url("../img/cover/foto-baile-rosa.png")
+  background-size cover
+  height 581px
+  background-attachment fixed
+  
+.photocover-
+  &1
+    background-image url("../img/homepage/carrusel01.jpg")
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    height 600px
+    
+  &2
+    background-image url("../img/homepage/carrusel02.jpg")
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+    height 600px
+
+.homepage-carousel
+  height 600px
