@@ -25,7 +25,8 @@
     "mapbox.js": "^2.4.0",
     "font-awesome": "fontawesome#^4.7.0",
     "simpleParallax": "simple-parallax#*",
-    "loaders.css": "^0.1.2"
+    "loaders.css": "^0.1.2",
+    "slick-carousel": "^1.8.0"
   },
   "group": {
     "css": [
