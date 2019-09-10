@@ -23,6 +23,8 @@ Contacto
     Ofrecemos clases de ballet para ni&ntilde;as y ni&ntilde;os desde los 3 a&ntilde;os hasta Avanzados, clases de ballet nivel intermedio-avanzado para adultos, y clases de Cardio Barre. Contamos con instalaciones de lujo y maestros calificados. Ven a conocernos!">
     <meta property="og:url" content="http://balletsylviereynaud.com/">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css"/>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.11.4/build/css/alertify.min.css"/>
   </head>
   <body>
     <div id="page">
@@ -72,22 +74,22 @@ Contacto
 	<div class="container">
 		<div class="whitebg heavy padding100 padding-b-0 position">
 			<div class="col-sm-6">
-				<form id="contact-form">
+				<form class="contact-form" id="contact-form" name="contact-form" method="post" enctype="multipart/form-data">
 				  <div class="form-group">
 				    <label class="lato" for="nombre">Nombre</label>
-				    <input type="text" name="name" class="form-control" id="name">
+				    <input type="text" name="name" class="form-control" id="name" required>
 				  </div>
 				  <div class="form-group">
 				    <label class="lato" for="correo">Correo electrónico</label>
-				    <input type="email" name="email" class="form-control" id="email">
+				    <input type="email" name="email" class="form-control" id="email" required>
 				  </div>
 				  <div class="form-group">
 				    <label class="lato" for="mensaje">Mensaje</label>
-				    <textarea class="form-control" name="message" id="message"></textarea>
+				    <textarea class="form-control" name="message" id="message" required></textarea>
 				  </div>
 					<div class="form-message">
 					</div>
-					<button type="submit" class="btn btn-contacto roman ">Enviar</button>
+					<button class="btn btn-contacto roman">Enviar</button>
 					<div class="loader sylvie-loader">
 						<div class="ball-pulse-sync">
 							<div></div>
