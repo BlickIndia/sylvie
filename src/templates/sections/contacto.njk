@@ -19,22 +19,22 @@ Contacto
 	<div class="container">
 		<div class="whitebg heavy padding100 padding-b-0 position">
 			<div class="col-sm-6">
-				<form id="contact-form">
+				<form class="contact-form" id="contact-form" name="contact-form" method="post" enctype="multipart/form-data">
 				  <div class="form-group">
 				    <label class="lato" for="nombre">Nombre</label>
-				    <input type="text" name="name" class="form-control" id="name">
+				    <input type="text" name="name" class="form-control" id="name" required>
 				  </div>
 				  <div class="form-group">
 				    <label class="lato" for="correo">Correo electrónico</label>
-				    <input type="email" name="email" class="form-control" id="email">
+				    <input type="email" name="email" class="form-control" id="email" required>
 				  </div>
 				  <div class="form-group">
 				    <label class="lato" for="mensaje">Mensaje</label>
-				    <textarea class="form-control" name="message" id="message"></textarea>
+				    <textarea class="form-control" name="message" id="message" required></textarea>
 				  </div>
 					<div class="form-message">
 					</div>
-					<button type="submit" class="btn btn-contacto roman ">Enviar</button>
+					<button class="btn btn-contacto roman">Enviar</button>
 					<div class="loader sylvie-loader">
 						<div class="ball-pulse-sync">
 							<div></div>
